@@ -4,7 +4,7 @@ import { getSession, useSession } from "next-auth/react";
 import Auth from "../components/Auth/Auth";
 import Chat from "../components/Chat/Chat";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({}) => {
   const { data: session } = useSession();
   const reloadSession = () => {};
   return (
@@ -22,6 +22,7 @@ export default Home;
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
+
   return {
     props: {
       session,
