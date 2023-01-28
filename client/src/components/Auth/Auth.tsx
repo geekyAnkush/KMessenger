@@ -52,7 +52,12 @@ const Auth: React.FunctionComponent<IAuthProps> = ({
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <Button colorScheme={"blackAlpha"} width="100%" onClick={onSubmit}>
+            <Button
+              colorScheme={"blackAlpha"}
+              width="100%"
+              onClick={onSubmit}
+              isLoading={loading}
+            >
               Save
             </Button>
           </>
