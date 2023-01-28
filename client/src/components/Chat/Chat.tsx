@@ -5,7 +5,9 @@ const Chat = () => {
   return (
     <div>
       chat
-      <Button onClick={() => signOut()}>Logout</Button>
+      <Button colorScheme={"blackAlpha"} onClick={() => signOut()}>
+        Logout
+      </Button>
     </div>
   );
 };

@@ -11,7 +11,7 @@ import { makeExecutableSchema } from "@graphql-tools/schema";
 import typeDefs from "./src/graphql/typeDefs";
 import resolvers from "./src/graphql/resolvers";
 import * as dotenv from "dotenv";
-import { GraphQLContext } from "./src/utils/types";
+import { GraphQLContext, Session } from "./src/utils/types";
 
 interface MyContext {
   token?: String;
@@ -51,7 +51,7 @@ const startServer = async () => {
       json(),
       expressMiddleware(server, {
         context: async ({ req }): Promise<GraphQLContext> => {
-          const session = await getSession({ req });
+          const session = (await getSession({ req })) as Session;
           return { session, prisma };
         },
       })
