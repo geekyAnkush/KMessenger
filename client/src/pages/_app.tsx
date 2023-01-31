@@ -1,5 +1,5 @@
 import { ApolloProvider } from "@apollo/client";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, DarkMode } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { Toaster } from "react-hot-toast";
@@ -11,8 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ApolloProvider client={client}>
       <SessionProvider session={pageProps.session}>
         <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
-          <Toaster />
+          <DarkMode>
+            <Component {...pageProps} />
+            <Toaster />
+          </DarkMode>
         </ChakraProvider>
       </SessionProvider>
     </ApolloProvider>
