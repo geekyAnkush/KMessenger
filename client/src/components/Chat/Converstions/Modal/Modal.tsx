@@ -21,7 +21,7 @@ import {
   SearchedUser,
   SearchUsersData,
   SearchUsersInput,
-} from "../../../../utils/types";
+} from "../../../../util/types";
 import Participants from "./Participants";
 import UserSearchList from "./UserSearchList";
 import { Session } from "next-auth";

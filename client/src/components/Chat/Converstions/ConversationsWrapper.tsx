@@ -3,7 +3,7 @@ import { Session } from "next-auth";
 import ConversationList from "./ConversationList";
 import ConversationOperations from "../../../graphql/operations/conversation";
 import { useQuery } from "@apollo/client";
-import { ConversationsData } from "../../../utils/types";
+import { ConversationsData } from "../../../util/types";
 interface ConversationsWrapperProps {
   session: Session;
 }
