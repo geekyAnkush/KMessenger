@@ -15,8 +15,16 @@ export default NextAuth({
   ],
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      return true;
+    },
     async session({ session, token, user }) {
-      return { ...session, user: { ...session.user, ...user } };
+      const sessionUser = { ...session.user, ...user };
+
+      return Promise.resolve({
+        ...session,
+        user: sessionUser,
+      });
     },
   },
 });
