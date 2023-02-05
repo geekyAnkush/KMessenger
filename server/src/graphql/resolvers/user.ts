@@ -1,4 +1,5 @@
 import { CreateUsernameResponse, GraphQLContext } from "../../utils/types";
+import { GraphQLError } from "graphql";
 
 const resolvers = {
   Query: {
@@ -12,7 +13,7 @@ const resolvers = {
         const { session, prisma } = context;
 
         if (!session?.user) {
-          throw new Error("Not Authorized");
+          throw new GraphQLError("Not Authorized");
         }
         const {
           user: { username: loggedUser },
@@ -29,7 +30,7 @@ const resolvers = {
         return users;
       } catch (error: any) {
         console.log("Search user error --> ", error);
-        return { error: error?.message };
+        throw new GraphQLError(error?.message);
       }
     },
   },
