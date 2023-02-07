@@ -24,6 +24,7 @@
     "graphql-ws": "^5.9.1",
     "lodash.merge": "^4.6.2",
     "next-auth": "^4.10.3",
+    "react": "^18.2.0",
     "ws": "^8.8.0"
   },
   "devDependencies": {
