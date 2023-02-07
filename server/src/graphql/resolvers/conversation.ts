@@ -1,4 +1,4 @@
-import { GraphQLContext } from "../../utils/types";
+import { GraphQLContext } from "../../util/types";
 import { GraphQLError } from "graphql";
 import { Prisma } from "@prisma/client";
 const resolvers = {
@@ -13,6 +13,7 @@ const resolvers = {
           user: { id: userId },
         } = session;
         const conversations = await prisma.conversation.findMany({
+          // @ts-ignore
           include: consversationPopulated,
         });
       } catch (error: any) {
@@ -40,6 +41,7 @@ const resolvers = {
           data: {
             participants: {
               createMany: {
+                // @ts-ignore
                 data: participantIds.map((id) => ({
                   userId: id,
                   seenStatus: id === userId,

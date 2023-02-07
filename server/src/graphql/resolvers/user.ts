@@ -1,4 +1,4 @@
-import { CreateUsernameResponse, GraphQLContext } from "../../utils/types";
+import { CreateUsernameResponse, GraphQLContext } from "../../util/types";
 import { GraphQLError } from "graphql";
 
 const resolvers = {
