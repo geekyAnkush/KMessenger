@@ -1,7 +1,7 @@
 import {
   ConversationPopulated,
   MessagePopulated,
-} from "../../../backend/src/util/types";
+} from "../../../server/src/util/types";
 
 /**
  * Users

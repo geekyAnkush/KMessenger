@@ -18,7 +18,7 @@ import toast from "react-hot-toast";
 import {
   ConversationPopulated,
   ParticipantPopulated,
-} from "../../../../../../backend/src/util/types";
+} from "../../../../../../server/src/util/types";
 import ConversationOperations from "../../../../graphql/operations/conversations";
 import UserOperations from "../../../../graphql/operations/users";
 import {

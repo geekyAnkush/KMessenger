@@ -4,7 +4,7 @@ import { Session } from "next-auth";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";
-import { ParticipantPopulated } from "../../../../../backend/src/util/types";
+import { ParticipantPopulated } from "../../../../../server/src/util/types";
 import ConversationOperations from "../../../graphql/operations/conversations";
 import MessageOperations from "../../../graphql/operations/messages";
 import {
