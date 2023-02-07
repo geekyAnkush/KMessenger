@@ -4,7 +4,8 @@
   "description": "Server for KMessenger application",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "start": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "Kumar Ankush",
