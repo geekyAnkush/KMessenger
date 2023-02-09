@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "start": "npx prisma generate --schema=src/prisma/schema.prisma && ts-node src/index.ts"
+    "build": "yarn && npx prisma generate --schema=src/prisma/schema.prisma",
+    "start": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "Kumar Ankush",
