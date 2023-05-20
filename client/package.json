@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "npx prisma generate",
+    "prebuild":"npx prisma generate"
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
